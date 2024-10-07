@@ -459,12 +459,11 @@ function showInterstitialAd() {
             document.body.removeChild(interstitialAd);
         }
     }, 3000); // adjust timing as needed
-    
+
 interstitialAd.addEventListener('click', () => {
     window.open('https://advertiser.com', '_blank');
 });
 }
-
 
 // Call this function at strategic points, e.g., at game over or level transition
 showInterstitialAd();
