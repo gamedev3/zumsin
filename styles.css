@@ -1,0 +1,221 @@
+/* Reset and default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-image: linear-gradient(120deg, #a6c0fe, #f68084);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .game-container {
+    background-image: url(frontbackgroun1.jpg);
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    width: 450px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 2s ease;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  header h1 {
+    font-size: 2.5em;
+    background: linear-gradient(to right, #f12711, #f5af19);
+    background-clip: text;
+    color: transparent;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+  }
+  
+  .game-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .game-image {
+    width: 70%;
+    height: auto;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    transition: transform 0.4s ease-in-out;
+  }
+  
+  .game-image:hover {
+    transform: scale(1.05);
+  }
+  
+  #gameCanvas {
+    display: none;
+    background-image: url("inside.background.jpg");
+    background-size: cover;
+    width: 100%; /* Full width for better responsiveness */
+    height: auto; /* Let it adjust according to aspect ratio */
+  }
+  
+  .buttons {
+    margin-bottom: 25px;
+  }
+  
+  .btn {
+    background-color: #ff1500;
+    background-image: linear-gradient(145deg, #ff0000, #000000,#2f00ff);
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 12px 25px;
+    margin: 5px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .btn::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.4), transparent 70%);
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.4s ease;
+    border-radius: 50%;
+  }
+  
+  .btn:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  
+  .btn:hover {
+    background-color: #343434;
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .start-btn {
+    animation: bounce 2s infinite;
+  }
+  
+  .retry-btn {
+    animation: pulse 2s infinite;
+  }
+  
+  /* Bounce animation for start button */
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-10px);
+    }
+    60% {
+      transform: translateY(-5px);
+    }
+  }
+  
+  /* Pulse animation for retry button */
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      box-shadow: 0 0 0 0 rgba(255, 22, 1, 0.7);
+    }
+    70% {
+      transform: scale(1.1);
+      box-shadow: 0 0 20px 10px rgba(255, 111, 97, 0);
+    }
+    100% {
+      transform: scale(1);
+      box-shadow: 0 0 0 0 rgba(255, 111, 97, 0);
+    }
+  }
+
+  .instructions {
+    background-color: #000000;
+    padding: 1px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    border-style:ridge;
+  }
+  
+  .instructions h2 {
+    color: #fd1500;
+    margin-bottom: 10px;
+    background-image: radial-gradient(#ffffff,#ffffff,#000000);
+    font-family: 'Courier New', Courier, monospace;
+   font-style:oblique;
+  }
+ .instructions section {
+  color: rgb(255, 255, 255);
+  border-radius: 25% 10%;
+  font-family: fantasy;
+ }
+  .instructions p {
+    font-size: 0.95em;
+    color: #fcfcfc;
+    line-height: 1.6;
+  }
+  .instructions strong {
+    color: rgb(255, 106, 0);
+  }
+  .instructions li {
+    color: #ffffff;
+  }
+  
+  .instructions:hover {
+    transform: scale(1.30);
+  }
+  .fullscreen-btn {
+    position: absolute; /* or fixed, depending on where you want it to stay */
+    top: 10px; /* Adjust this value to move the button down or up */
+    right: 10px; /* Adjust this value to move the button left or right */
+    background-image: linear-gradient(145deg, #001eff, #000000,#ff0000);/* Adjust the background color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* Ensure it's above other content */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .fullscreen-btn:hover {
+    background-color: #ff3e50; /* Adjust hover color */
+    transform: scale(1.1); /* Slightly increase the size on hover */
+  }
+.gameover {
+  margin-bottom: 10px;
+  background-image:linear-gradient(#0022ff,#000000,#000000);
+  border-radius: 10px 100px / 120px;
+  
+}
+
+.gameover h2 { color: #fff700;
+
+}
+.gameover p {
+  color: #ffffff;
+}
+.note {
+  color: #000000;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  background: #ffffff;
+  padding: 1px;
+  border-radius: 110px;
+}

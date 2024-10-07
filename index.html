@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boss Hunt 2D: Zombie Attack</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="game-container">
+        <header>
+            <h1>Boss Hunt 2D</h1>
+        </header>
+
+        <div id="start-menu" class="game-content">
+            <img src="BoseHunt2D.pic.png"class="game-image">
+            
+            <div class="buttons">
+                <button id="start-button" class="btn start-btn">Start Game</button>
+                <button id="fullscreen-button" class="fullscreen-btn">Full Screen</button>
+            </div>
+
+            <div class="instructions">
+
+                <h2>Game Instructions</h2>
+                <ul>
+                    <li><section>On Windows:</section>
+                        <ul>
+                            <li>➡️ Use <strong>Arrow Keys</strong> to move.</li>
+                            <li>⚔️ Press <strong>'G' Key</strong> to attack.</li>
+                        </ul>
+                    </li>
+                    <li><section>On Mobile:</section>
+                        <ul>
+                            <li>👉 <strong>Touch</strong> the screen to move and attack.</li>
+                        </ul>
+                    </li>
+                </ul>
+                <p>Good luck, adventurer!🌟</p>
+            </div>
+            <br>
+            <div class="note"
+               p>Note: "Fullscreen mode activates automatically for an immersive experience"</p>
+        </div>
+        </div>
+
+        <canvas id="gameCanvas"></canvas>
+
+        <div id="retry-menu" style="display:none;">
+           <div class="gameover">
+            <h2>Game Over</h2>            
+            <p id="final-score"></p>
+            </div>           
+            <button id="retry-button" class="btn retry-btn">Retry</button>     
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
