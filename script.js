@@ -428,7 +428,7 @@ function showBannerAd() {
 
     // Optionally, add an event listener for clicks
     bannerAd.addEventListener('click', () => {
-        window.open('https://advertiser.com', '_blank');
+        window.open('https://zireemilsoude.net/4/8206297', '_blank');
     });
 }
 
@@ -461,7 +461,7 @@ function showInterstitialAd() {
     }, 3000); // adjust timing as needed
 
 interstitialAd.addEventListener('click', () => {
-    window.open('https://advertiser.com', '_blank');
+    window.open('https://zireemilsoude.net/4/8206295', '_blank');
 });
 }
 
